@@ -3,7 +3,7 @@
 
 __attribute__((constructor)) static void init() {
     @autoreleasepool {
-		void *handle = dlopen("/var/mobile/Documents/RevealLoader/RevealServer", RTLD_NOW);
+		void *handle = dlopen("/var/jb/Library/Application Support/RevealLoader/RevealServer", RTLD_NOW);
 		if (handle) {
 			[[NSNotificationCenter defaultCenter] postNotificationName:@"IBARevealRequestStart" object:nil];
 		}
